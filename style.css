@@ -66,6 +66,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 main {
@@ -76,6 +77,9 @@ main section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+main section h2 {
+  text-align: center;
 }
 main section article {
   margin: 2rem;
