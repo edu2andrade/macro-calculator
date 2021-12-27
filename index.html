@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Macro Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora de macros</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Tus requerimientos energeticos</h2>
+        <article>
+          <h3>Calculadora de calorías</h3>
+          <form action="/" id="calc">
+            <fieldset>
+              <legend>Sexo</legend>
+              <div>
+                <input type="radio" name="sexo" value="masc" id="sexo-masc" />
+                <label for="sexo-masc">Señor</label>
+              </div>
+              <div>
+                <input type="radio" name="sexo" value="fem" id="sexo-fem" />
+                <label for="sexo-fem">Señora</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Datos personales</legend>
+              <label for="altura">Altura en cm</label>
+              <input type="number" name="altura" id="altura" />
+              <label for="peso">Peso en kilos</label>
+              <input type="number" name="peso" id="peso" />
+              <label for="edad">Edad en años</label>
+              <input type="number" name="edad" id="edad" />
+            </fieldset>
+
+            <fieldset>
+              <legend>Tu nivel de actividad física (TDEE)</legend>
+              <!-- Hay que inserir los días de entrenamiento aquí -->
+              <div>
+                <input
+                  type="radio"
+                  name="tdee"
+                  value="sedentario"
+                  id="tdee-sedentario"
+                />
+                <label for="tdee-sedentario"
+                  >Trabajas en una posición sentada (p. ej. trabajos de oficina
+                  o administrativos)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="tdee"
+                  value="activo"
+                  id="tdee-activo"
+                />
+                <label for="tdee-activo"
+                  >Sedentario con algo de movimiento y, a ratos, de pie (p. ej.
+                  trabajos en colegios, hospitales o de comercial)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="tdee"
+                  value="muy-activo"
+                  id="tdee-muy-activo"
+                />
+                <label for="tdee-muy-activo"
+                  >De pie y en movimiento p. ej. venta al por menor,
+                  teatro</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="tdee"
+                  value="extrem-activo"
+                  id="tdee-extrem-activo"
+                />
+                <label for="tdee-extrem-activo"
+                  >Trabajo físico exigente p. ej. en gastromonía, trabajos de
+                  artesanía</label
+                >
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Tu objetivo</legend>
+              <div>
+                <input
+                  type="radio"
+                  name="obj"
+                  value="ganar-mm"
+                  id="obj-ganar-mm"
+                />
+                <label for="obj-ganar-mm">Ganar masa muscular</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="obj"
+                  value="mantener"
+                  id="obj-mantener"
+                />
+                <label for="obj-mantener">Mantener el peso</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="obj"
+                  value="perdida"
+                  id="obj-perdida"
+                />
+                <label for="obj-perdida">Pérdida de peso</label>
+              </div>
+            </fieldset>
+            <div id="submit-btn">
+              <input type="submit" value="Calcular ahora" />
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>Developed by Eduardo Andrade &#128526;&#129304;</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
