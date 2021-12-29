@@ -78,6 +78,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     
     h2 {
       text-align: center;
@@ -86,15 +87,21 @@ main {
     article {
       margin: 2rem;
       padding: 2rem;
+      width: 22rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: white;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7);
       border-radius: 0.5rem;
 
       h3 {
         margin-bottom: 1rem;
+      }
+
+      form {
+        text-align: start;
       }
 
       fieldset {
@@ -116,14 +123,13 @@ main {
         }
       }
     }
-    .hidden {
-      // add .classList.toggle('hidden') to hide/unhide this element
-      // position: absolute; top: -9999px; left: -9999px;
+    .results {
+      width: 22rem;
       .results-container {
         margin: 2rem;
         padding: 2rem;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -136,13 +142,22 @@ main {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-color: white;
+          background-color: rgba(255, 255, 255, 0.7);
           border-radius: 0.5rem;
           h4 {
             margin-bottom: 1rem;
           }
         }
       }
+    }
+    .hidden {
+      // add .classList.toggle('hidden') to hide/unhide this element
+      // position: absolute; top: -1500px;
+      position: absolute;
+      transform: translateX(1000px);
+    }
+    .form-transition {
+      transition: 1s;
     }
   }
 }
