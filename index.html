@@ -21,7 +21,7 @@
     <main>
       <section>
         <h2>Requerimientos energeticos</h2>
-        <article>
+        <article class="calories-calc">
           <h3>Calculadora de calorías</h3>
           <form action="" id="calc">
             <fieldset>
@@ -106,6 +106,30 @@
               <input type="submit" value="Calcular ahora" />
             </div>
           </form>
+        </article>
+        <article class="results hidden">
+          <h3>Resultados</h3>
+          <div class="results-container">
+            <div class="result-item">
+              <h4>Calorías</h4>
+              <small id="calories">result</small>
+            </div>
+            <div class="result-item">
+              <h4>Carbohidratos</h4>
+              <small id="carbs-cal">result</small>
+              <small id="carbs-grams">result</small>
+            </div>
+            <div class="result-item">
+              <h4>Proteínas</h4>
+              <small id="proteins-cal">result</small>
+              <small id="proteins-grams">result</small>
+            </div>
+            <div class="result-item">
+              <h4>Grasas</h4>
+              <small id="fats-cal">result</small>
+              <small id="fats-grams">result</small>
+            </div>
+          </div>
         </article>
       </section>
     </main>

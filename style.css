@@ -111,6 +111,30 @@ main section article #submit-btn {
 main section article #submit-btn input {
   padding: 0.5rem 3rem;
 }
+main section .hidden .results-container {
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #08e01a;
+  border-radius: 0.5rem;
+}
+main section .hidden .results-container .result-item {
+  margin: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+main section .hidden .results-container .result-item h4 {
+  margin-bottom: 1rem;
+}
 
 footer {
   display: flex;

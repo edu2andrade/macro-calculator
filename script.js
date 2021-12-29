@@ -6,9 +6,18 @@ const age = document.getElementById("age");
 const tdee = document.querySelectorAll("input[name='tdee']");
 const goal = document.getElementById("goal");
 
+const resultCalories = document.getElementById("calories");
+const resultCarbsCal = document.getElementById("carbs-cal");
+const resultProteinsCal = document.getElementById("proteins-cal");
+const resultFatsCal = document.getElementById("fats-cal");
+
+const resultCarbsGrams = document.getElementById("carbs-grams");
+const resultProteinsGrams = document.getElementById("proteins-grams");
+const resultFatsGrams = document.getElementById("fats-grams");
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  checkMacros();
+  macroCalcs();
 });
 
 // Function tdee's selector:
@@ -129,9 +138,6 @@ const caloricDailyNeeds = () => {
   ? (harrisBenedict() + mifflin()) / 2
   : (harrisBenedict() + mifflin() + basicRule())/3;
 
-  console.log("goal -->", goal.value);
-  console.log("adjustedTdee -->", adjustedAverageTdee);
-
   switch (goal.value) {
     case "gain-weight":
       result = adjustedAverageTdee + (adjustedAverageTdee * 0.1);
@@ -145,14 +151,28 @@ const caloricDailyNeeds = () => {
     default:
       result = "Please select a goal first!!!";
   }
+
+  resultCalories.textContent = `calorías diarias: ${result.toFixed()} kcal`;
+
   return result;
 }
 
 // Macro calculations:
 
-function checkMacros() {
-  console.log("Harris -->", harrisBenedict());
-  console.log("Mifflin -->", mifflin());
-  console.log("basicRule -->", basicRule());
-  console.log("caloricDailyNeeds -->", caloricDailyNeeds());
+const macroCalcs = () => {
+  const fatGrams = 1 * weight.value;
+  const fatCal = fatGrams * 9;
+  const proteinGrams = 1.8 * weight.value;
+  const proteinCal = 4 * proteinGrams;
+  const carbCal = caloricDailyNeeds() - (proteinCal + fatCal);
+  const carbGrams = carbCal / 4;
+
+  resultCarbsCal.textContent = `${carbCal.toFixed()} kcal`;
+  resultCarbsGrams.textContent = `${carbGrams.toFixed()} gramos`
+
+  resultProteinsCal.textContent = `${proteinCal.toFixed()} kcal`;
+  resultProteinsGrams.textContent = `${proteinGrams.toFixed()} gramos`;
+
+  resultFatsCal.textContent = `${fatCal.toFixed()} kcal`;
+  resultFatsGrams.textContent = `${fatGrams.toFixed()} gramos`;
 }

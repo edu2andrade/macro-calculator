@@ -116,6 +116,34 @@ main {
         }
       }
     }
+    .hidden {
+      // add .classList.toggle('hidden') to hide/unhide this element
+      // position: absolute; top: -9999px; left: -9999px;
+      .results-container {
+        margin: 2rem;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(8, 224, 26);
+        border-radius: 0.5rem;
+        .result-item {
+          margin: .5rem;
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          border-radius: 0.5rem;
+          h4 {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
   }
 }
 
