@@ -27,106 +27,80 @@
             <fieldset>
               <legend>Sexo</legend>
               <div>
-                <input type="radio" name="sexo" value="masc" id="sexo-masc" />
-                <label for="sexo-masc">Señor</label>
+                <input type="radio" name="genre" value="male" id="genreMale" />
+                <label for="genreMale">Señor</label>
               </div>
               <div>
-                <input type="radio" name="sexo" value="fem" id="sexo-fem" />
-                <label for="sexo-fem">Señora</label>
+                <input type="radio" name="genre" value="female" id="genreFemale" />
+                <label for="genreFemale">Señora</label>
               </div>
             </fieldset>
             <fieldset>
               <legend>Datos personales</legend>
-              <label for="altura">Altura en cm</label>
-              <input type="number" name="altura" id="altura" />
-              <label for="peso">Peso en kilos</label>
-              <input type="number" name="peso" id="peso" />
-              <label for="edad">Edad en años</label>
-              <input type="number" name="edad" id="edad" />
+              <label for="height">Altura en cm</label>
+              <input type="number" name="height" id="height" />
+              <label for="weight">Peso en kilos</label>
+              <input type="number" name="weight" id="weight" />
+              <label for="age">Edad en años</label>
+              <input type="number" name="age" id="age" />
             </fieldset>
 
             <fieldset>
-              <legend>Tu nivel de actividad física (TDEE)</legend>
+              <legend>Nivel de actividad física (TDEE)</legend>
               <!-- Hay que inserir los días de entrenamiento aquí -->
               <div>
                 <input
                   type="radio"
                   name="tdee"
-                  value="sedentario"
-                  id="tdee-sedentario"
+                  value="sedentary"
+                  id="tdee-sedentary"
                 />
-                <label for="tdee-sedentario"
-                  >Trabajas en una posición sentada (p. ej. trabajos de oficina
-                  o administrativos)</label
+                <label for="tdee-sedentary"
+                  >Sedentario</label
                 >
               </div>
               <div>
                 <input
                   type="radio"
                   name="tdee"
-                  value="activo"
-                  id="tdee-activo"
+                  value="active"
+                  id="tdee-active"
                 />
-                <label for="tdee-activo"
-                  >Sedentario con algo de movimiento y, a ratos, de pie (p. ej.
-                  trabajos en colegios, hospitales o de comercial)</label
+                <label for="tdee-active"
+                  >Activo</label
                 >
               </div>
               <div>
                 <input
                   type="radio"
                   name="tdee"
-                  value="muy-activo"
-                  id="tdee-muy-activo"
+                  value="very-active"
+                  id="tdee-very-active"
                 />
-                <label for="tdee-muy-activo"
-                  >De pie y en movimiento p. ej. venta al por menor,
-                  teatro</label
+                <label for="tdee-very-active"
+                  >Muy activo</label
                 >
               </div>
               <div>
                 <input
                   type="radio"
                   name="tdee"
-                  value="extrem-activo"
-                  id="tdee-extrem-activo"
+                  value="extrem-active"
+                  id="tdee-extrem-active"
                 />
-                <label for="tdee-extrem-activo"
-                  >Trabajo físico exigente p. ej. en gastromonía, trabajos de
-                  artesanía</label
+                <label for="tdee-extrem-active"
+                  >Extremadamente activo</label
                 >
               </div>
             </fieldset>
 
             <fieldset>
               <legend>Tu objetivo</legend>
-              <div>
-                <input
-                  type="radio"
-                  name="obj"
-                  value="ganar-mm"
-                  id="obj-ganar-mm"
-                />
-                <label for="obj-ganar-mm">Ganar masa muscular</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="obj"
-                  value="mantener"
-                  id="obj-mantener"
-                />
-                <label for="obj-mantener">Mantener el peso</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="obj"
-                  value="perdida"
-                  id="obj-perdida"
-                />
-                <label for="obj-perdida">Pérdida de peso</label>
-              </div>
+              <select name="goal" id="goal">
+                <option value="gain-weight">Ganar masa muscular</option>
+                <option value="keep-the-same">Mantener el peso</option>
+                <option value="loose-weight">Perdida de peso</option>
+              </select>
             </fieldset>
             <div id="submit-btn">
               <input type="submit" value="Calcular ahora" />
