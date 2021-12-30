@@ -37,7 +37,15 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Ubuntu", sans-serif;
-  background-color: rgba(250, 61, 61, 0.7);
+  background-color: #f7fafc;
+  overflow-x: hidden;
+
+  h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  }
 }
 
 /* A elements that don't have a class get default styles */
@@ -63,11 +71,25 @@ select {
 // main styles
 
 header {
-  margin: 4rem;
+  padding: 4rem;
+  height: 26rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: url(/images/HeroDarkSide.jpg);
+  background-position-x: -24rem;
+
+  h1 {
+    color: white;
+    margin: 2rem;
+  }
+
+  hr {
+    width: 12rem;
+    color: #f2295b;
+  }
 }
 
 main {
@@ -93,8 +115,9 @@ main {
       justify-content: center;
       align-items: center;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.7);
-      border-radius: 0.5rem;
+      background-color: white;
+      border-radius: 0;
+      box-shadow: .2rem .5rem 1rem #3a3a3a28;;
 
       h3 {
         margin-bottom: 1rem;
@@ -118,8 +141,19 @@ main {
         display: flex;
         justify-content: center;
         margin-top: 2rem;
+        
         input {
           padding: 0.5rem 3rem;
+          color: white;
+          background: #f2295b;
+          border: none;
+          transition: 200ms;
+          cursor: pointer;
+          text-transform: uppercase;
+        }
+        input:hover {
+          color: #f2295b;
+          background: transparent;
         }
       }
     }
@@ -133,8 +167,8 @@ main {
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: rgb(8, 224, 26);
-        border-radius: 0.5rem;
+        background-color: #f2295b;
+        border-radius: 0;
         .result-item {
           margin: .5rem;
           padding: 2rem;
@@ -143,13 +177,14 @@ main {
           justify-content: center;
           align-items: center;
           background-color: rgba(255, 255, 255, 0.7);
-          border-radius: 0.5rem;
+          border-radius: 0;
           h4 {
             margin-bottom: 1rem;
           }
         }
       }
     }
+
     .hidden {
       // add .classList.toggle('hidden') to hide/unhide this element
       // position: absolute; top: -1500px;
@@ -165,6 +200,9 @@ main {
 footer {
   display: flex;
   justify-content: center;
-  margin: 2rem;
+  padding: 2rem;
   font-size: small;
+  text-align: center;
+  color: white;
+  background-color: black;
 }
